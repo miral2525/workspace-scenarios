@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBAC Admin Dashboard</title>
+    <link rel="stylesheet" href="assignment.css">
+</head>
+<body>
+    <header>
+        <h1>RBAC Admin Dashboard</h1>
+    </header>
+    <main>
+        <section id="user-management">
+            <h2>User Management</h2>
+            <button id="add-user-btn">Add User</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <!-- Dynamically populated rows -->
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>Admin</td>
+                        <td>Active</td>
+                        <td>
+                            <button class="update-btn">Update</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="role-management">
+            <h2>Role Management</h2>
+            <button id="add-role-btn">Add Role</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role Name</th>
+                        <th>Permissions</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="role-table-body">
+                    <!-- Dynamically populated rows -->
+                    <tr>
+                        <td>Manager</td>
+                        <td>Read, Write</td>
+                        <td>
+                            <button class="update-btn">Update</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div id="modal" class="hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">Modal Title</h3>
+            <form id="modal-form">
+                <!-- Dynamically populated form fields -->
+            </form>
+            <div class="modal-actions">
+                <button id="modal-save-btn">Save</button>
+                <button id="modal-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assignment.js"></script>
+</body>
+</html>
