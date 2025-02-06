@@ -1,0 +1,191 @@
+
+body {
+ 
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+
+.welcome-message {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #4A90E2;
+  width: 0;
+
+  animation: typing 2s steps(7) forwards, blink 0.50s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+h1 {
+  color: #4A90E2;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  text-align: center;
+
+  
+}
+
+h1:hover {
+  color: #F36F6F;
+  
+}
+
+
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-right: 10px;
+  margin-inline-start: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4A90E2;
+ 
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #357ABD;
+  transform: scale(1);
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+li:hover {
+  background-color: #f1f1f1;
+  transform: translateX(5px);
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+
+
+li.completed input[type="checkbox"]:checked {
+  background-color: #A1C4FF;
+}
+
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  margin: 0 8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #4A90E2;
+  color: white;
+  transform: scale(1.1);
+}
+
+.filter-buttons button.active {
+  background-color: #4A90E2;
+  color: white;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ul li {
+  animation: fadeIn 0.3s ease-out;
+}
